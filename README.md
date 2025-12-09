@@ -19,13 +19,15 @@ The detection uses semantic embeddings, numeric extraction, and similarity searc
 
 
 ## ⚙️ Tech Stack
-Component	Purpose
-Python 3	Core programming language
-PyPDF2	PDF text extraction
-SentenceTransformers (MiniLM)	Embedding generation
-FAISS	Fast vector similarity search
-NumPy	Numerical processing
-JSON	Input/output formats
+| Component                         | Purpose                            |
+|----------------------------------|------------------------------------|
+| Python 3                         | Core programming language          |
+| PyPDF2                           | PDF text extraction                |
+| SentenceTransformers (MiniLM)    | Embedding generation               |
+| FAISS                            | Fast vector similarity search      |
+| NumPy                            | Numerical processing               |
+| JSON                             | Input/output formats               |
+
 
 ## 📦 Installation
 
@@ -52,10 +54,12 @@ python validator.py --pdf ../input-pdfs/axis_loan1.pdf --qa qa_samples.json --ou
 ```
 
 ## 🔍 Argument Meaning
-Argument	Meaning
---pdf	Path to source PDF
---qa	JSON file containing questions & AI answers
---out	Output file where validation results are saved
+| Argument | Meaning                                   |
+|----------|-------------------------------------------|
+| --pdf    | Path to source PDF                        |
+| --qa     | JSON file containing questions & answers  |
+| --out    | Output file where validation results save |
+
 📤 Output Format (validation_results.json)
 
 ## Each entry looks like:
@@ -75,14 +79,6 @@ Inside /screenshots, the following proof screenshots are available:
 🗂 Project folder structure
 
 🖥 Command-line execution of validator.py
-
-🧠 validator.py source code
-
-📄 qa_samples.json content
-
-📊 Generated validation_results.json
-
-📑 Loan PDF reference page
 
 These confirm the application works end-to-end as required.
 
