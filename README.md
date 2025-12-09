@@ -1,81 +1,65 @@
-📘 AI PDF Answer Validation System
-ArgyleEnigma Tech Labs — Internship Assignment Submission
+# ✨ AI PDF Answer Validation System
 
 
-🚀 Overview
+## 🚀 Overview
 
-This project validates AI-generated answers against a financial document (PDF).
-The system checks whether each answer is:
+This project validates AI-generated answers against a financial loan document (PDF).
 
-SUPPORTED (fully matches PDF)
+For every question–answer pair, the system determines whether the answer is:
 
-PARTIALLY_SUPPORTED (some match, some mismatch)
+✅ SUPPORTED — fully matches PDF
 
-NOT_SUPPORTED (no match in PDF)
+⚠️ PARTIALLY_SUPPORTED — some match, some mismatch
 
-It uses embeddings + similarity search to find evidence in the PDF.
+❌ NOT_SUPPORTED — no relevant match found
 
-📁 Project Structure
-/src
-    validator.py        
-    qa_samples.json       
+The detection uses semantic embeddings, numeric extraction, and similarity search.
 
-/input-pdfs
-    axis_loan1.pdf        
-
-/screenshots             
-    folder structure.png
-    output.png
-
-README.md
-
-validation_results.json   # Final output
+## 📁 Project Structure
 
 
-⚙️ Tech Stack
+## ⚙️ Tech Stack
+Component	Purpose
+Python 3	Core programming language
+PyPDF2	PDF text extraction
+SentenceTransformers (MiniLM)	Embedding generation
+FAISS	Fast vector similarity search
+NumPy	Numerical processing
+JSON	Input/output formats
 
-Python 3
+## 📦 Installation
 
-PyPDF2 (PDF text extraction)
-
-SentenceTransformers (MiniLM embeddings)
-
-FAISS (vector search)
-
-NumPy
-
-JSON for input/output
-
-📦 Installation
-
-Run the following commands:
-
+Install required libraries:
+```bash
 pip install PyPDF2 sentence-transformers faiss-cpu numpy
+```
 
 
-For Windows (FAISS):
-
+## For Windows FAISS:
+```bash
 pip install faiss-cpu-windows
+```
 
 ▶️ How to Run the Validator
-Step 1: Navigate to src folder
+Step 1 — Navigate to src
+```bash
 cd src
+```
 
-Step 2: Run the validator script
+Step 2 — Execute the script
+```bash
 python validator.py --pdf ../input-pdfs/axis_loan1.pdf --qa qa_samples.json --out ../validation_results.json
+```
 
-What this command means:
+## 🔍 Argument Meaning
+Argument	Meaning
+--pdf	Path to source PDF
+--qa	JSON file containing questions & AI answers
+--out	Output file where validation results are saved
+📤 Output Format (validation_results.json)
 
---pdf → input PDF to validate against
-
---qa → JSON file containing questions & AI answers
-
---out → file to save validation results
-
-📤 Output Format
-
-The output validation_results.json contains entries like:
-
+## Each entry looks like:
+```python
 {
   "question": "What is the sanctioned loan amount?",
   "ai_answer": "The sanctioned loan amount is Rs. 15,00,000.",
@@ -83,38 +67,40 @@ The output validation_results.json contains entries like:
   "confidence_score": 0.82,
   "supporting_text": "[Page X] ... Facility Amount Rupees: 1,500,000 ..."
 }
+```
+## 📸 Screenshots Included
 
-📸 Screenshots Included
+Inside /screenshots, the following proof screenshots are available:
 
-Inside /screenshots, the following screenshots are provided:
+🗂 Project folder structure
 
-Project folder structure
+🖥 Command-line execution of validator.py
 
-Running validator script (CMD)
+🧠 validator.py source code
 
-validator.py code
+📄 qa_samples.json content
 
-qa_samples.json content
+📊 Generated validation_results.json
 
-Generated validation_results.json
+📑 Loan PDF reference page
 
-PDF page showing loan details
+These confirm the application works end-to-end as required.
 
-These screenshots demonstrate a working application as required by the assignment.
+## 🧠 How the System Works (Simplified)
 
-🧠 How the System Works
+Extract text from the PDF
 
-The PDF is split into text chunks
+Break it into meaningful chunks
 
-Each chunk is converted into embeddings
+Convert chunks → embeddings (MiniLM)
 
-Each AI-generated answer is compared with the PDF using:
+Convert Q&A → embeddings
 
-Semantic similarity
+Compare semantic similarity
 
-Numeric matching
+Perform numeric extraction & matching
 
-The system assigns one of three labels:
+Generate decision label:
 
 SUPPORTED
 
@@ -122,14 +108,10 @@ PARTIALLY_SUPPORTED
 
 NOT_SUPPORTED
 
-🎯 Submission Summary
+## 🎯 Submission Summary
 
-All required files included
-
-Folder structure follows assignment instructions
-
-PDF → Q&A → Validation pipeline works end-to-end
-
-Output JSON provided
-
-Screenshots for proof included
+✔ Complete folder structure
+✔ Full PDF → Q&A → Validation pipeline
+✔ Final output JSON included
+✔ Screenshots provided
+✔ Easy-to-run instructions documented
