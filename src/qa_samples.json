@@ -1,0 +1,42 @@
+[
+  {
+    "question": "What is the sanctioned loan amount?",
+    "ai_answer": "The sanctioned loan amount is Rs. 15,00,000."
+  },
+  {
+    "question": "What is the interest rate on the loan?",
+    "ai_answer": "The interest rate is 10.75% per annum."
+  },
+  {
+    "question": "How many EMIs are required to repay the loan?",
+    "ai_answer": "The loan must be repaid in 60 monthly EMIs."
+  },
+  {
+    "question": "What is the EMI amount?",
+    "ai_answer": "The EMI amount is Rs. 32,425 per month."
+  },
+  {
+    "question": "What is the processing fee charged?",
+    "ai_answer": "The processing fee is Rs. 5,000 plus GST."
+  },
+  {
+    "question": "What is the prepayment charge?",
+    "ai_answer": "Prepayment charges are 2% of the outstanding principal plus GST."
+  },
+  {
+    "question": "What is the penal interest rate for overdue installments?",
+    "ai_answer": "Penal interest is charged at 24% per annum, i.e. 2% per month, on overdue installments."
+  },
+  {
+    "question": "Is any collateral security required for this loan?",
+    "ai_answer": "Yes, the loan is secured against a residential property."
+  },
+  {
+    "question": "On which date of the month is the EMI due?",
+    "ai_answer": "The EMI is due on the 1st of every month."
+  },
+  {
+    "question": "How many installments are there in total?",
+    "ai_answer": "There are 48 monthly installments."
+  }
+]
