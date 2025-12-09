@@ -98,16 +98,16 @@ Perform numeric extraction & matching
 
 Generate decision label:
 
-SUPPORTED
+- SUPPORTED
 
-PARTIALLY_SUPPORTED
+- PARTIALLY_SUPPORTED
 
-NOT_SUPPORTED
+- NOT_SUPPORTED
 
 ## 🎯 Submission Summary
 
-✔ Complete folder structure
-✔ Full PDF → Q&A → Validation pipeline
-✔ Final output JSON included
-✔ Screenshots provided
+✔ Complete folder structure<br>
+✔ Full PDF → Q&A → Validation pipeline<br>
+✔ Final output JSON included<br>
+✔ Screenshots provided<br>
 ✔ Easy-to-run instructions documented
